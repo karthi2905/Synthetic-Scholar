@@ -46,9 +46,9 @@ export default function Sidebar() {
         })}
       </nav>
       <div className="px-6 mt-auto">
-        <button className="w-full bg-primary-container text-on-primary-container font-label text-[11px] uppercase tracking-widest font-bold py-4 rounded-lg hover:opacity-90 transition-opacity">
+        <Link href="/workspace/1" className="flex items-center justify-center w-full bg-primary-container text-on-primary-container font-label text-[11px] uppercase tracking-widest font-bold py-4 rounded-lg hover:opacity-90 transition-opacity">
           Start Practice
-        </button>
+        </Link>
       </div>
     </aside>
   );
