@@ -265,8 +265,7 @@ export default function Workspace() {
                   scrollBeyondLastLine: false,
                   smoothScrolling: true,
                   cursorBlinking: "smooth",
-                  cursorSmoothCaretAnimation: "on",
-                  backgroundColor: "#0b1326"
+                  cursorSmoothCaretAnimation: "on"
                 }}
               />
             )}
