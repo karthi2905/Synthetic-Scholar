@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const { code, problem_id, problem_description, testcases } = body;
 
     // Call the Python backend dynamically
-    const API_URL = process.env.BACKEND_URL || "http://localhost:8000";
+    const API_URL = process.env.BACKEND_URL || "http://127.0.0.1:8000";
     
     const response = await fetch(`${API_URL}/analyze`, {
       method: "POST",
