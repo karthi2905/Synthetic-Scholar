@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   const links = [
     { name: "Dashboard", href: "/dashboard", icon: "grid_view" },
-    { name: "Problems", href: "/", icon: "code" },
+    { name: "Problems", href: "/problems", icon: "code" },
     { name: "Learning Path", href: "/learning-path", icon: "route" },
     { name: "Analytics", href: "/analysis", icon: "insights" },
   ];

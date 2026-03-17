@@ -6,8 +6,10 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { code, problem_id, problem_description, testcases } = body;
 
-    // Call the Python backend
-    const response = await fetch("https://synthetic-scholar-api.onrender.com/analyze", {
+    // Call the Python backend dynamically
+    const API_URL = process.env.BACKEND_URL || "http://localhost:8000";
+    
+    const response = await fetch(`${API_URL}/analyze`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

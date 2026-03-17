@@ -18,12 +18,9 @@ export default function Problems() {
   const categories = ["All", ...Array.from(new Set(problems.map((p) => p.category)))];
 
   return (
-    <div className="flex bg-background min-h-screen text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-      <Sidebar />
-      
-      <div className="md:ml-64 min-h-screen flex flex-col flex-1">
+    <div className="min-h-screen flex flex-col w-full text-on-surface bg-background">
         {/* Top Navigation Bar */}
-        <header className="bg-background flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 backdrop-blur-xl border-b border-outline-variant/10">
+        <header className="bg-background/80 flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 backdrop-blur-xl border-b border-outline-variant/10">
           <div className="flex items-center gap-x-6">
             <span className="text-xl font-black text-primary tracking-tighter">Synthetic Scholar</span>
             <div className="hidden lg:flex items-center gap-x-6 h-full">
@@ -134,7 +131,6 @@ export default function Problems() {
             </div>
           </section>
         </main>
-      </div>
     </div>
   );
 }
