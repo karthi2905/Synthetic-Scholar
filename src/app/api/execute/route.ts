@@ -28,6 +28,9 @@ export async function POST(req: Request) {
     const data = await response.json();
     return NextResponse.json(data);
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const API_URL = process.env.BACKEND_URL || "http://127.0.0.1:8000";
+    return NextResponse.json({ 
+      error: `Fetch failed to backend at: ${API_URL}/analyze. Original error: ${error.message}` 
+    }, { status: 500 });
   }
 }
